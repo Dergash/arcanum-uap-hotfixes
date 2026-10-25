@@ -7,6 +7,8 @@ This hotfix intends to address them in games with UAP 2.0.2 installed.
 
 See [changelog](./CHANGELOG.md) for the full list of fixes.
 
+If you only interested in reading the restored dialogue, check [spoilers](./SPOILERS.md).
+
 ## Installation
 
 - Option 1: Grab `Arcanum.PATCH8` from the [Releases](https://github.com/Dergash/arcanum-uap-hotfixes/releases) section and put it into your `Arcanum\modules` folder
