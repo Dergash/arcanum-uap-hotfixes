@@ -148,7 +148,7 @@
 {202}{Of course.  Here's the money... [Give it to him.]}{}{5}{$$500}{210}{$$-500}
 {203}{I see.  Perhaps I'll return later.  But a few more questions...}{}{5}{$$500}{91}{}
 {204}{I don't have the money right now...}{}{5}{$$-499}{219}{}
-{205}{Yeah!  Here money...! [Give it to him.]}{}{-4}{$500}{210}{$$-500}
+{205}{Yeah!  Here money...! [Give it to him.]}{}{-4}{$$500}{210}{$$-500}
 {206}{Uh...mebbe later.  I got more questions!}{}{-4}{$$500}{91}{}
 {207}{I not have money now...}{}{-4}{$$-499}{219}{}
 {208}{E:}{}{1}{}{0}{}
