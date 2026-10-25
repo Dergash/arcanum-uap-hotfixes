@@ -184,18 +184,18 @@
 {257}{A commendable attempt at reconciliation, but I just don't think I can get over my grievances with you...}{A commendable attempt at reconciliation, but I just don't think I can get over my grievances with you...}{}{52}{}{}
 {258}{I'm willing to do whatever it takes to win you over...}{}{5}{}{262}{re +10}
 {259}{Will you have a grievance with my splitting your skull?}{}{5}{}{}{re -10, co, fl 277}
-{260}{I'm sorry you see things that way.  I'll take my leave.}{}{5}{}{0}{}
+{260}{I'm sorry you see things that way.  I'll take my leave.}{}{5}{}{0}{lf5 1}
 {262}{You are quite determined.  Oh, alright!  I can't help but forgive your obvious character flaws...}{You are quite determined.  Oh, alright!  I can't help but forgive your obvious character flaws...}{}{53}{}{}
 {263}{That's more like it!  Might I ask your name?}{}{5}{me 0}{13}{}
 {264}{Splendid.  We may have started out on the wrong foot...}{}{5}{me 1, lf5 1, lf6 0}{39}{}
 {265}{That's more like it, Magnus!  May I ask you a few questions?}{}{5}{me 1, lf6 1, re 40}{60}{}
-{266}{E:}{}{5}{}{0}{}
+{266}{E:}{}{5}{me 1}{0}{}
 {277}{Your mouth has cost you your life today, stranger.  Goodbye and good riddance.}{Your mouth has cost you your life today, stranger.  Goodbye and good riddance.}{}{54}{}{}
 {279}{Hmmm...I do see your point, stranger.  I was quite mistaken about you...it's obvious to me now.  Please, forgive the outburst...}{Hmmm...I do see your point, stranger.  I was quite mistaken about you...it's obvious to me now.  Please, forgive the outburst...}{}{55}{}{}
 {280}{That's more like it!  Might I ask your name?}{}{5}{me 0}{13}{}
 {281}{Splendid.  We may have started out on the wrong foot...}{}{5}{me 1, lf5 1, lf6 0}{39}{}
 {282}{That's more like it, Magnus!  May I ask you a few questions?}{}{5}{me 1, lf6 1, re 40}{60}{}
-{283}{E:}{}{5}{}{0}{}
+{283}{E:}{}{5}{me 1}{0}{}
 {300}{What?  What did you find?}{What?  What did you find?}{}{56}{}{lf13 1}
 {301}{I killed them...[Tell him about it.]}{}{5}{gf2367 1, lf7 1}{306}{}
 {302}{I spoke with them...[Tell him about it.]}{}{5}{gf1022 1, gf2367 0, lf7 1}{327}{}
