@@ -1,3 +1,79 @@
+# Version 1.1.0
+
+## [Roseborough/Ring of Brodgar dialogue is inaccessible for Virgil and Z'an Al'urin](https://github.com/Dergash/arcanum-uap-hotfixes/issues/5)
+Commits: [f7d968d](https://github.com/Dergash/arcanum-uap-hotfixes/commit/f7d968d383f4a34a84bc9491c580ad06176bc294)
+
+Both Virgil and Z'an Al'uring have voiced travelogue about Ring of Brodgar.  
+At certain point during development the Ring of Brodgar was located in the area of Ancient Ruins (1755W 1480S).  
+Final game has the Ring of Brodgar made part of Roseborough, but the dialogue condition was never amended to reflect that change.
+Combined with `ia` engine bug, it made those dialogues are inaccessible.
+
+Now you can ask Virgil and Z'an Al'urin about current location when in Roseborough to hear this restored dialogue.
+
+## [Torian Kel has inaccessible dialogue for Hardin's Pass](https://github.com/Dergash/arcanum-uap-hotfixes/issues/6)
+Commits: [93c98d9](https://github.com/Dergash/arcanum-uap-hotfixes/commit/93c98d9a352251545a3e5e70aeffd5bc9a2a43aa)
+
+Torian Kel's voiced travelogue for Hardin's Pass was previously inaccessible because landing point in `mes/gamearea.mes` was a tiny bit outside of the Hardin's Pass town map.  
+
+I've moved the landing point a bit to restore his dialogue there.  
+
+## [Murgo has inaccessible dialogue for Torin Quarry](https://github.com/Dergash/arcanum-uap-hotfixes/issues/8)
+Commits: [ad0b585](https://github.com/Dergash/arcanum-uap-hotfixes/commit/ad0b585c41d2bbc084eaa29b650ce5e89d72b480)
+
+The travelogue for Murgo was inaccessible because Torin Quarry has lacked a Town Map. Apparently it was planned at some point, as the list of Town Maps in vanilla game does include the record for Torin Quarry. 
+
+I've generated one (a small one, two sectors) to restore his dialogue.
+
+## [Magnus offensive introduction makes him permanently unavailable as a companion](https://github.com/Dergash/arcanum-uap-hotfixes/issues/4)
+Commits: [c7ff030](https://github.com/Dergash/arcanum-uap-hotfixes/commit/c7ff030c4a6cd885406dfb0e69260d56d9265abd)
+
+If Magnus reaction is low during introduction dialogue and you use polite branch, but you exit before asking his name, he is permanently lost as a companion - talking with him again only leads to Exit option.
+
+Raising reaction afterwards (i.e. via Beauty increase) doesn't help.
+
+This was happening because of two things:
+- couple of exit dialogue options were lacking condition `me 1` checks
+- another exit option was not seeting local variable that would allow to resume conversation later
+
+Now conversation should no longer lead to dead end.
+
+## [Dumb characters can't get Spot Traps expert training with Vegards MoltenFlow](https://github.com/Dergash/arcanum-uap-hotfixes/issues/12)
+Commits: [a6043ab](https://github.com/Dergash/arcanum-uap-hotfixes/commit/a6043ab97671f0fd2761ea4bb552d52e6fe8ab6f)
+
+A `$` symbol was missing from the payment line, now he trains dumb characters successfully.
+
+Thanks [@barbarbrick](https://www.flickr.com/people/163554572@N05/)!
+
+## [Great Helm erroneously gives AC:18 instead of stated AC:3 DR:7](https://github.com/Dergash/arcanum-uap-hotfixes/issues/9)
+Commits: [9356e8e](https://github.com/Dergash/arcanum-uap-hotfixes/commit/9356e8e3fcf69b9e431ea7d5d98499cd890292f4)
+
+When deciding between the wrong description and the wrong item parameters, I've decided that the fault lies with actual parameters, AC:18 has to be wrong.
+
+It seems the intended progression of helms in vanilla game was:
+- Helmet (ac:2 dr:5 PE:-1)
+- Great Helm (ac:3 dr:7 PE:-1)
+- Helm of Vision (ac:3 dr:7, crafted from Great Helm)
+- Goggled Helmet (ac:6 dr:9 PE:+3, crafted from Helm of Vision)
+  - or Miner's Helmet (ac: 15, light bonus, crafted from Helm of Vision)
+
+But as it was, Great Helm was much more useful than Helm of Vision for all characters and a little bit more useful that Miner's Helmet for melee experts.
+
+I've changed Great Helm prototype to provide AC:3 DR:7 as per item description.
+
+## [Morning Star Perfume doesn't work](https://github.com/Dergash/arcanum-uap-hotfixes/issues/10)
+Commits: [00cc4cf](https://github.com/Dergash/arcanum-uap-hotfixes/commit/00cc4cfb99328349a2275e10ed5014ea74bf8603)
+
+It seems that this item which is purchased from Tailors was supposed to provide you with a temporary +1 bonus to Beauty, but the item prototype was missing a necessary spell.
+
+Now it should be usable.
+
+## [Sarah Toon offensive dialogue erroneously shows retrieved deed option](https://github.com/Dergash/arcanum-uap-hotfixes/issues/3)
+Commits: [2f21291](https://github.com/Dergash/arcanum-uap-hotfixes/commit/2f2129193bd708bb23a91b63190d5f28780cb8f8)
+
+If you initailly has a negative reaction with Sarah Toon, an option to tell you that you gave the deed to the mines to her brother will erroneously appear, even if you haven't done so.
+
+I've added missing conditions to prevent that from happening.
+
 # Version 1.0.0
 
 ## Magnus dialogue on Isle of Despair
@@ -26,7 +102,7 @@ I've enabled this missing dialogue for Story State 7, so now you should be able 
 
 Note: This one can be considered a "mod" as while the response from Magnus is fully voiced, there is no player line for it in the original game so I had to come up with my own.
 
-## Broken dialogue about Isle of Despair for Virgil, Vollinger, Sogg, Geoffrey and Tollo
+## [Broken dialogue about Isle of Despair for Virgil, Vollinger, Sogg, Geoffrey and Tollo](https://github.com/Dergash/arcanum-uap-hotfixes/issues/1)
 Commits: [99888d0](https://github.com/Dergash/arcanum-uap-hotfixes/commit/99888d09c6ae3dda794a32b7dc36074a6c505e18)
 
 Due to what I believe to be an [engine bug](https://github.com/alexbatalov/arcanum-ce/issues/167) in how `ia` condition checks are performed by the game engine, dialogues where you can ask your followers about Isle of Despair are unavailable in the game.
