@@ -84,20 +84,20 @@
 {241}{W:}{}{5}{lf1 0, re41}{20}{lf1 1 }
 {242}{K:}{}{5}{lf1 1}{120}{ }
 {243}{I brought the deed to the mine for you. [Give her the deed.]}{}{5}{in6698}{-7}{in6698, gf2586 1, qu1152 4, rp1047 }
-{244}{I retrieved the deed for your brother.}{}{5}{}{0}{lf4 1, re-10, fl 465}
+{244}{I retrieved the deed for your brother.}{}{5}{lf1 1, qu1152 4}{0}{lf4 1, re-10, fl 465}
 {249}{E:}{}{1}{}{0}{ }
 {250}{No, I must apologize to you. There is no call for me to treat you that way, no matter who you are.}{No, I must apologize to you. There is no call for me to treat you that way, no matter who you are.}{}{}{}{ }
 {251}{W:}{}{5}{lf1 0, re41}{20}{lf1 1 }
 {252}{K:}{}{5}{lf1 1}{120}{ }
 {253}{I brought the deed to the mine for you. [Give her the deed.]}{}{5}{in6698}{-7}{in6698, gf2586 1, qu1152 4, rp1047 }
-{254}{I retrieved the deed for your brother.}{}{5}{}{0}{lf4 1, re-10, fl 475}
+{254}{I retrieved the deed for your brother.}{}{5}{lf1 1, qu1152 4}{0}{lf4 1, re-10, fl 475}
 {255}{It is too late for that, harlot! Prepare to die!}{}{5}{}{0}{co }
 {259}{E:}{}{1}{}{0}{ }
 {260}{[She smiles broadly at you.] Hah! I like you. [She bows to you, theatrically.] Please forgive me, sir.}{[She smiles broadly at you.] Hah! I like you. [She bows to you, theatrically.] Please forgive me, madam.}{}{}{}{ }
 {261}{W:}{}{5}{lf1 0, re41}{20}{lf1 1 }
 {262}{K:}{}{5}{lf1 1}{120}{ }
 {263}{I brought the deed to the mine for you. [Give her the deed.]}{}{5}{in6698}{-7}{in6698, gf2586 1, qu1152 4, rp1047 }
-{264}{I retrieved the deed for your brother.}{}{5}{}{0}{lf4 1, re-10, fl 485}
+{264}{I retrieved the deed for your brother.}{}{5}{lf1 1, qu1152 4}{0}{lf4 1, re-10, fl 485}
 {265}{It is too late for that, harlot! Prepare to die!}{}{5}{}{0}{co }
 {269}{E:}{}{1}{}{0}{ }
 {270}{[She touches the side of your face.] Oh, I am so sorry, but I have nothing to give you today, my imbecilic friend.}{[She touches the side of your face.] Oh, I am so sorry, but I have nothing to give you today, my imbecilic friend.}{}{}{}{ }
