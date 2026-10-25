@@ -29,10 +29,10 @@
 {18}{96014,92287, 0, 0 /Gorgoth Pass/A long forgotten pass joining the kingdoms of Dernholm and Caladon./Radius:5}
 {19}{20693, 56027, 0, 0 /Isle of Despair/A penal colony.}
 {20}{29874,47350, 0, 0 /Gateway to the Wastes/A bridge leading into the Vendigroth Wastes.} // Old Leahbo 29151,48287  
-{21}{62243,65664, 0, 0 /Tarant/The biggest, most industrial city in Arcanum.}
+{21}{62182,65662, 0, 0 /Tarant/The biggest, most industrial city in Arcanum.}
 {22}{19704,37452, 0, 0 /Vendigroth Ruins/The remnants of an ancient city./Radius:1}// entrance to ruins: 19689,37487 
 {23}{46198,120881, -60, 10 /Nasrudin's Resting Place/Reputed to be the location of the remains of Nasrudin.}//old:46827,120680 
-{24}{43669, 85717, 0, 0 /Stringy Petes Cove/A haunted cove./Radius:-1}
+{24}{43669, 85717, 0, 0 /Stringy Pete's Cove/A haunted cove./Radius:-1}
 {25}{32602, 71189, 0, 0/The Williamson Homestead/A run-down shanty.}
 {26}{55779, 76127, 0, 0/Vooriden/A small village just south of Tarant./Radius:20}
 {27}{75486, 18380, 0, -10/The Bangellian Deeps/The resting place of the Bangellian Scourge.}
