@@ -1,0 +1,14 @@
+[package]
+name = "arcanum-dinput-loader"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "dinput"
+crate-type = ["cdylib"]
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = [
+	"Win32_System_LibraryLoader",
+	"Win32_System_SystemInformation",
+] }
