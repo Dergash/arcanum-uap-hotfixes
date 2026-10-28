@@ -5,20 +5,15 @@ use windows_sys::Win32::Foundation::HMODULE;
 use windows_sys::Win32::System::LibraryLoader::{GetModuleFileNameW, GetProcAddress, LoadLibraryW};
 
 // ASI plugins to load, hardcoded instead of scanning as UAP comes with its own .asi files.
-const ASI_FILE_NAMES: &[&str] = &["arcanum-extender.asi"];
+const ASI_FILE_NAMES: &[&str] = &["engine_fixes.asi"];
 
 pub fn load_asi_plugins(proxy_module: HMODULE) {
     if proxy_module.is_null() {
         return;
     }
     let mut path: Vec<u16> = vec![0u16; 32768];
-    let length = unsafe {
-        GetModuleFileNameW(
-            proxy_module,
-            path.as_mut_ptr(),
-            path.len() as u32,
-        )
-    } as usize;
+    let length =
+        unsafe { GetModuleFileNameW(proxy_module, path.as_mut_ptr(), path.len() as u32) } as usize;
     if length == 0 || length >= path.len() {
         return;
     }

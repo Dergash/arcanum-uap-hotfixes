@@ -11,7 +11,6 @@ static DIRECT_INPUT_CREATE: OnceLock<usize> = OnceLock::new();
 // https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemdirectoryw
 const PATH_BUFFER_SIZE: usize = 32768;
 
-
 /// Loads system dinput.dll and obtains and caches address for its DirectInputCreateA func for use by game
 pub fn direct_input_create() -> usize {
     *DIRECT_INPUT_CREATE.get_or_init(load_system_direct_input)

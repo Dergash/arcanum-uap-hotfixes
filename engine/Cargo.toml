@@ -1,0 +1,3 @@
+[workspace]
+members = ["dinput", "fixes"]
+resolver = "3"

@@ -1,5 +1,4 @@
 /// Minimalistic ASI loader to circumvent conflicting for .asi files with UAP
-
 use std::ffi::c_void;
 use std::sync::atomic::{AtomicPtr, Ordering};
 
@@ -17,7 +16,7 @@ const E_FAIL: i32 = 0x80004005_u32 as i32;
 // Handle to our dinput.dll
 static PROXY_MODULE: AtomicPtr<c_void> = AtomicPtr::new(std::ptr::null_mut());
 
-// 
+//
 static ASI_PLUGINS_LOADED: std::sync::OnceLock<()> = std::sync::OnceLock::new();
 
 /// See <https://learn.microsoft.com/en-us/windows/win32/dlls/dllmain>
