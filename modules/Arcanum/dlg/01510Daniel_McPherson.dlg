@@ -18,8 +18,8 @@
 {18}{But I have only a question or two to ask.  I will be quick.}{}{5}{lf1 0}{42}{re +5}
 {19}{Please good sir, I only require a moment of your time.}{}{5}{lf1 0}{42}{re+15}
 {20}{I realize how busy you are, and I will be quick, Daniel.}{}{5}{lf1 1}{42}{re +5}
-{21}{I see how time would matter with such an insignificant lifespan.}{}{5}{ra -1}{28}{re -5}
-{22}{You appear to be standing around doing absolutely nothing!}{}{5}{ra 1}{28}{re-10}
+{21}{I see how time would matter with such an insignificant lifespan.}{}{5}{ra -1, ra -7, ra -8, ra -11}{28}{re -5}
+{22}{You appear to be standing around doing absolutely nothing!}{}{5}{ra 1, ra 7, ra 8, ra 11}{28}{re-10}
 {23}{Uh... wha?}{}{-4}{}{38}{re +2}
 {24}{Yes!  Time!  You answer me!}{}{-4}{}{28}{re -2}
 {25}{Me do bad?  Me sorry.  Uh...  Me ask sumthin'?}{}{-4}{lf1 0}{42}{}
