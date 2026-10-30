@@ -683,13 +683,13 @@
 {684}{F:}{}{1}{}{0}{}
 {685}{To risk me ship, me life, an' me crew...  Five thousan' coin.  Not one less.}{To risk me ship, me life, an' me crew...  Five thousan' coin.  Not one less.}{}{}{}{}
 {686}{That is preposterous!}{}{5}{}{691}{}
-{687}{What piracy!  Fine!  Here.  Let us be on our way!}{}{5}{$$5000}{-32}{}
+{687}{What piracy!  Fine!  Here.  Let us be on our way!}{}{5}{$$5000}{-32}{$$ -5000}
 {688}{Dat too much!}{}{-4}{}{691}{}
-{689}{Oh!  Dat a lot... [thinks for a moment] okay.  Here.  We go.}{}{-4}{$$5000}{-32}{}
+{689}{Oh!  Dat a lot... [thinks for a moment] okay.  Here.  We go.}{}{-4}{$$5000}{-32}{$$ -5000}
 {690}{F:}{}{1}{}{0}{}
 {691}{That be me only offer.  I doubt ye will find a better one.  What say ye?}{That be me only offer.  I doubt ye will find a better one.  What say ye?}{}{}{}{}
-{692}{Fine!  Here.  Let us be on our way!}{}{5}{$$5000}{-32}{}
-{693}{[thinks for a moment]  Okay.  Here.  We go now.}{}{-4}{$$5000}{-32}{}
+{692}{Fine!  Here.  Let us be on our way!}{}{5}{$$5000}{-32}{$$ -5000}
+{693}{[thinks for a moment]  Okay.  Here.  We go now.}{}{-4}{$$5000}{-32}{$$ -5000}
 {694}{F:}{}{1}{}{0}{}
 {695}{Oh!  I understand ye now...  [poor simple bastard]  Ye want to negotiate yer passage aboard!   ...Well...  Ye do appear to be strong of body.  I guess ye could work for yer passage.  I be leaving for Tarant on this very tide.  I'll let ye work your way there, if ye can leave now.}{Oh!  I understand ye now...  Ye want to negotiate yer passage aboard!   ...Well...  Ye do appear to have quite a, um... body.  Perhaps you could "work" for yer passage.  If ye know what I be sayin'.  I be leaving for Tarant on this very tide.  I'll let ye pay for yer passage by tending to me an' me men.  Can ye can leave now lass?}{}{}{}{}
 {696}{Uh...  Okay.  Me go boat now.}{}{-4}{}{-20}{}
