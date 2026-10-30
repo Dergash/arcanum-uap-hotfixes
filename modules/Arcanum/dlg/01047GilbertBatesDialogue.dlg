@@ -230,8 +230,8 @@
 {590}{Most certainly. I think this should cover any difficulties you incur along the way.}{Most certainly. I think this should cover any difficulties you incur along the way.}{}{58}{}{$$450 }
 {591}{Excellent. How do I get there?}{}{5}{}{530}{qu1015 2 }
 {600}{What would this be pertaining too?}{What would this be pertaining too?}{}{59}{}{ }
-{601}{I'd like to ask you about this ring.}{}{5}{in 2804, ra -2}{10}{ }
-{602}{I'd like to ask you about this ring I had. [Describe the ring.]}{}{5}{ni 2804, ra -2}{10}{ }
+{601}{I'd like to ask you about this ring.}{}{5}{in 2804}{10}{ }
+{602}{I'd like to ask you about this ring I had. [Describe the ring.]}{}{5}{ni 2804}{10}{ }
 {609}{F:}{}{5}{}{0}{ }
 {610}{Is there any news?}{Is there any news?}{}{60}{}{ }
 {611}{The dwarves were banished to the Isle of Despair because, uh ...}{}{5}{gf1007 1, lf11 0}{500}{lf11 1 }
@@ -286,7 +286,7 @@
 {740}{What will you do now?}{What will you do now?}{}{74}{}{ }
 {741}{I'm going to talk to the dark elves.}{}{5}{re 49}{720}{ }
 {742}{I'm going to talk to the dark elves.}{}{5}{re -48}{820}{ }
-{750}{Of course, my friend, of course. But tell me, what excuse did they proffer for us to swallow like naïve schoolgirls?}{Of course, my friend, of course. But tell me, what excuse did they proffer for us to swallow like naïve schoolgirls?}{}{75}{}{ }
+{750}{Of course, my friend, of course. But tell me, what excuse did they proffer for us to swallow like naï¿½ve schoolgirls?}{Of course, my friend, of course. But tell me, what excuse did they proffer for us to swallow like naï¿½ve schoolgirls?}{}{75}{}{ }
 {751}{I haven't spoken with them. I'm on my way to talk to them now.}{}{5}{qb1018 2}{720}{ }
 {752}{They blame it on the dark elves.}{}{5}{qa1018 3}{730}{ }
 {760}{What in the name of all that is holy would make you deign to address me? I would assume you have some pertinent information to impart.}{What in the name of all that is holy would make you deign to address me? I would assume you have some pertinent information to impart.}{}{76}{}{ }
