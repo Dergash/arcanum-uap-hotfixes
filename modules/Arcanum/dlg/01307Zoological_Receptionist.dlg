@@ -1,8 +1,8 @@
 {1}{Hello!  Welcome to the Tarantian Zoological Society.  How might I help you today?}{Hello!  Welcome to the Tarantian Zoological Society.  How might I help you today?}{}{}{}{}
 {2}{Just taking a look around.}{}{5}{}{9}{}
-{3}{I'm looking for Dr. Tristan Fenwick...}{}{5}{gf2125}{13}{}
+{3}{I'm looking for Dr. Tristan Fenwick...}{}{5}{gf2125 1}{13}{}
 {5}{Just came to look!}{}{-4}{}{9}{}
-{6}{I look for Tri-I-s-t-u-nn F-f-enw-ic-k...}{}{-4}{gf2125}{13}{}
+{6}{I look for Tri-I-s-t-u-nn F-f-enw-ic-k...}{}{-4}{gf2125 1}{13}{}
 {8}{E:}{}{1}{}{0}{}
 {9}{Yes!  Go ahead!  The exhibits are open to the public.  Enjoy!}{Yes!  Go ahead!  The exhibits are open to the public.  Enjoy!}{}{}{}{}
 {10}{Thank you.}{}{5}{}{0}{}
