@@ -1,4 +1,4 @@
-use super::constants::{ASM_TEST_NPC_BED_WP_FLAG, IS_DAY_ADDRESS, PATCH_SIZE, WAKE_UP_RVA};
+use super::constants::{ASM_TEST_NPC_BED_WP_FLAG, FIND_NEAREST_BED_RVA, PATCH_SIZE, WAKE_UP_RVA};
 use crate::runtime::Runtime;
 use crate::stuck_sleeping::relative_displacement;
 
@@ -11,13 +11,12 @@ const RESTORE_REGISTERS: [u8; 3] = [0x5A, 0x59, 0x58];
 const JNE_SHORT: u8 = 0x75;
 const JE_SHORT: u8 = 0x74;
 const JMP: u8 = 0xE9;
-const CMP_EAX: [u8; 2] = [0x83, 0xF8];
 
 /// Prepares patch to fix the sleeping bug
 ///
 /// The patch is:
-/// - check `is_sleeping` flag on NPC
-/// - if day `hour` (TODO),
+/// - if the NPC is sleeping, check for a bed at its current standpoint
+/// - wake it if no bed exists at that standpoint
 /// - jump to a branch where game supposed to wake them up (`ai_wake_up(obj)`)
 ///     - see https://github.com/alexbatalov/arcanum-ce/blob/a7ff41b300ef712f0e7d088183a3d08957110cdd/src/game/ai.c#L2755
 /// - otherwise execute original instruction that we were hijacking (`test ebp,200`) and jump to original flow
@@ -28,44 +27,42 @@ pub fn prepare_patch_code(
 ) -> Result<Vec<u8>, &'static str> {
     let mut patch_code = Vec::with_capacity(PATCH_SIZE);
 
-    // `ai_is_day` modifies EAX so we'll need to restore its original value later
     patch_code.extend_from_slice(&SAVE_REGISTERS);
-    // call `ai_is_day` (arcanum.4ACD90)
-    patch_code.extend_from_slice(&[CALL]);
-    // 8 = 3 for pushing eax, ecx and edx and 5 for `call``
-    let day_check_displacement =
-        relative_displacement(patch_address + 8, runtime.game_address(IS_DAY_ADDRESS))
-            .ok_or("test")?;
-    patch_code.extend_from_slice(&day_check_displacement.to_le_bytes());
-    // check is_day
-    patch_code.extend_from_slice(&CMP_EAX);
-    patch_code.extend_from_slice(&[0x01]);
-    // if not, jump to exit flow without waking
-    patch_code.extend_from_slice(&[JNE_SHORT, 0x0F]);
-    // if day, check `is_sleeping` flag on NPC ([ESP+1C]) against 0
+    // The original `is_sleeping` local is at [ESP+0x10].
+    // Saving three registers moves it to [ESP+0x1C].
     patch_code.extend_from_slice(&[0x83, 0x7C, 0x24, 0x1C, 0x00]);
-    // if not sleeping, jump to exit flow without waking
-    patch_code.extend_from_slice(&[JE_SHORT, 0x08]);
+    // If not sleeping, skip to the original flow.
+    patch_code.extend_from_slice(&[JE_SHORT, 0x1E]);
 
-    // exit flow with waking up:
+    // standpoint_loc is at original [ESP+0x1C]/[ESP+0x20].
+    // After saving registers and pushing the high dword, both values are at [ESP+0x2C].
+    patch_code.extend_from_slice(&[0xFF, 0x74, 0x24, 0x2C]);
+    patch_code.extend_from_slice(&[0xFF, 0x74, 0x24, 0x2C]);
+    patch_code.push(CALL);
+    let bed_check_displacement = relative_displacement(
+        patch_address + 23,
+        runtime.game_address(FIND_NEAREST_BED_RVA),
+    )
+    .ok_or("bed lookup branch is out of range")?;
+    patch_code.extend_from_slice(&bed_check_displacement.to_le_bytes());
+    // Discard the int64 location argument.
+    patch_code.extend_from_slice(&[0x83, 0xC4, 0x08]);
+    // OBJ_HANDLE_NULL is 0; a nonzero 64-bit handle means a bed exists.
+    patch_code.extend_from_slice(&[0x09, 0xD0, 0x85, 0xC0]);
+    // If a bed exists at this standpoint, keep the NPC asleep.
+    patch_code.extend_from_slice(&[JNE_SHORT, 0x08]);
 
-    // if sleeping, then first restore edx,ecx,eax to how they were before day check...
+    // No bed exists and the NPC is sleeping: take the original wake-up path.
     patch_code.extend_from_slice(&RESTORE_REGISTERS);
-    // ...and then exit from patch to waking up procedure `arcanum.4ACF6D`
     patch_code.extend_from_slice(&[JMP]);
-    // 28 = length of all the previous instructions
     let wake_displacement =
-        relative_displacement(patch_address + 28, runtime.game_address(WAKE_UP_RVA))
+        relative_displacement(patch_address + 40, runtime.game_address(WAKE_UP_RVA))
             .ok_or("wake-up branch is out of range")?;
     patch_code.extend_from_slice(&wake_displacement.to_le_bytes());
 
-    // exit flow without waking up:
-
-    // restore original edx,ecx,eax
+    // Not sleeping or a bed exists: restore registers and resume original flow.
     patch_code.extend_from_slice(&RESTORE_REGISTERS);
-    // replay the original instructions displaced by the detour to our patch
     patch_code.extend_from_slice(&ASM_TEST_NPC_BED_WP_FLAG);
-    // Resume execution immediately after the displaced instructions.
     patch_code.push(JMP);
     let return_instruction_end = patch_address + PATCH_SIZE;
     let return_displacement = relative_displacement(
