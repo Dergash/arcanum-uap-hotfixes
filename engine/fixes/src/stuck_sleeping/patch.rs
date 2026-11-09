@@ -1,6 +1,5 @@
 use super::constants::{ASM_TEST_NPC_BED_WP_FLAG, FIND_NEAREST_BED_RVA, PATCH_SIZE, WAKE_UP_RVA};
-use crate::runtime::Runtime;
-use crate::stuck_sleeping::relative_displacement;
+use crate::{relative_displacement, runtime::Runtime};
 
 // assembly instructions
 const CALL: u8 = 0xE8;

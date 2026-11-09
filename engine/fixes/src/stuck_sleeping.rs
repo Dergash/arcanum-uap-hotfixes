@@ -71,7 +71,3 @@ pub fn install(runtime: &Runtime) -> Result<(), &'static str> {
 
     detour::detour(injection_address, patch as usize)
 }
-
-pub fn relative_displacement(instruction_end: usize, destination: usize) -> Option<i32> {
-    i32::try_from(destination as i64 - instruction_end as i64).ok()
-}

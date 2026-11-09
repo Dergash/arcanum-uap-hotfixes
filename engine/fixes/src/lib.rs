@@ -6,6 +6,11 @@ use windows_sys::Win32::System::Threading::CreateThread;
 
 mod runtime;
 mod stuck_sleeping;
+mod voice_lines_fix;
+
+fn relative_displacement(instruction_end: usize, destination: usize) -> Option<i32> {
+    i32::try_from(destination as i64 - instruction_end as i64).ok()
+}
 
 const PROCESS_ATTACH: u32 = 1;
 
@@ -62,6 +67,12 @@ unsafe extern "system" fn initialize_runtime(module: *mut c_void) -> u32 {
         Ok(()) => runtime.log("[DEBUG] Standpoint sleeping-condition patch installed."),
         Err(error) => runtime.log(&format!(
             "[ERROR] Unable to install standpoint sleeping-condition patch: {error}"
+        )),
+    }
+    match voice_lines_fix::install(&runtime) {
+        Ok(()) => runtime.log("[DEBUG] Voice-line file-copy patch installed."),
+        Err(error) => runtime.log(&format!(
+            "[ERROR] Unable to install voice-line file-copy patch: {error}"
         )),
     }
     0

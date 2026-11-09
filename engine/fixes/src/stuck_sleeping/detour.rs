@@ -3,8 +3,9 @@ use windows_sys::Win32::System::Diagnostics::Debug::FlushInstructionCache;
 use windows_sys::Win32::System::Memory::{PAGE_EXECUTE_READWRITE, VirtualProtect};
 use windows_sys::Win32::System::Threading::GetCurrentProcess;
 
+use crate::relative_displacement;
+
 use super::constants::ASM_TEST_NPC_BED_WP_FLAG;
-use super::relative_displacement;
 
 const JMP: u8 = 0xE9;
 
