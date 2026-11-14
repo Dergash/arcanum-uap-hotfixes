@@ -5,7 +5,7 @@
 {5}{Hmph!  I had a few questions, David...}{}{5}{me1, re-40, lf4 0, qb1138 4, qb1137 4}{69}{} 
 {6}{I haven't figured out what's killing your rabbits yet...}{}{5}{QU1137 2}{93}{} 
 {7}{I discovered what's been happening to your rabbits...}{}{5}{QU1137 3}{97}{} 
-{8}{Hello David.}{}{5}{QU1137 4, lf4 0, gf2377 1}{}{fl 151} 
+{8}{Hello David.}{}{5}{QU1137 4, lf4 0, gf2377 1, qb1138 5}{}{fl 151} 
 {9}{Hello again, David.  Can I ask you some questions?}{}{5}{lf4 1, gf2377 1}{}{co, fl 143} 
 {10}{I haven't found a cure for Cynthia yet...}{}{5}{QU1138 2, ni3605}{152}{} 
 {11}{I found a cure for Cynthia!}{}{5}{qa1138 1, in3605}{156}{} 
