@@ -1,7 +1,7 @@
 {1}{G:}{G:}{}{}{}{}
 {2}{And who might you be?}{}{5}{me 0}{6}{}
 {3}{Greetings, Grunwalde.  Have you a moment?}{}{5}{lf6 1}{10}{}
-{4}{E:}{}{5}{}{0}{}
+{4}{E:}{}{5}{lf6 1}{0}{}
 {6}{My name is Grunwalde.}{My name is Grunwalde.}{}{}{}{lf6 1}
 {7}{Hello, Grunwalde.  Might I speak with you a moment?}{}{5}{}{10}{}
 {8}{E:}{}{5}{}{0}{}
@@ -95,7 +95,7 @@
 {115}{Sorry.  Looks like you're lacking in funds.  Come back when you have enough money...}{Sorry.  Looks like you're lacking in funds.  Come back when you have enough money...}{}{}{}{}
 {116}{E:}{}{5}{}{0}{}
 {120}{G:}{G:}{}{}{}{}
-{121}{Duh...}{}{-4}{}{}{}
+{121}{Duh...}{}{-4}{}{125}{}
 {125}{Ah, such a shame.  A dullard has wandered into my shop.  Here...take 5 coins.  [He gives them to you.]  The gods favor those who are merciful to ones such as yourself.}{Ah, such a shame.  A dullard has wandered into my shop.  Here...take 5 coins.  [He gives them to you.]  The gods favor those who are merciful to ones such as yourself.}{}{}{}{$$5}
 {126}{Uh?  I no dullerd!  I smash you skull!}{}{-4}{}{}{co, fl 93}
 {127}{E:}{}{-4}{}{0}{lf7 1}
