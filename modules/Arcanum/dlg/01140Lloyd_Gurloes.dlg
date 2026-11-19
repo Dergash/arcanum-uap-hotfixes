@@ -97,7 +97,7 @@
 {119}{Where I find expurt tray-ner for Lock-pick, Furtoes?}{}{-4}{tr 14 1, tr 14 -1}{135}{}
 {120}{Where I find expurt tray-ner for Traps and stuff, Furtoes?}{}{-4}{tr 15 1, tr 15 -1}{140}{}
 {121}{E:}{}{1}{}{0}{}
-{125}{Well sir, you seem to be the simple type, but perhaps you can help me.  I'm in dire need of some pure ore...I'll not make a blade without it.  If you could find some, I might be obliged to make you a dagger out of whatever was left...}{Well, madam, you seem to be the simple type, but perhaps you can help me.  I'm in dire need of some pure ore...I'll not make a blade without it.  If you could find some, I might be obliged to make you a dagger out of whatever was left...}{}{}{}{qu10361 }
+{125}{Well sir, you seem to be the simple type, but perhaps you can help me.  I'm in dire need of some pure ore...I'll not make a blade without it.  If you could find some, I might be obliged to make you a dagger out of whatever was left...}{Well, madam, you seem to be the simple type, but perhaps you can help me.  I'm in dire need of some pure ore...I'll not make a blade without it.  If you could find some, I might be obliged to make you a dagger out of whatever was left...}{}{}{}{qu1036 1}
 {126}{Okay!  I get it! }{}{-4}{ni 5622}{78}{qu1036 2}
 {127}{I think about it, Furtoes...come back later...}{}{-4}{}{0}{}
 {128}{I already got it! Here you go...}{}{-4}{in 5622}{89}{in 5622}
