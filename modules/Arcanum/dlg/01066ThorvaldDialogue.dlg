@@ -324,12 +324,12 @@
 {652}{I want your eye thingys.}{}{-4}{ps -3}{662}{}
 {662}{Sorry, these are mine, you'll have to find your own.}{Sorry, these are mine, you'll have to find your own.}{}{}{}{}
 {663}{OK I go now.}{}{-4}{}{0}{}
-{672}{NO! you give to me NOW!!!}{}{-4}{}{675}{lf4 , re -5}
+{672}{NO! you give to me NOW!!!}{}{-4}{}{675}{re -5}
 {673}{Alright, but you must promise to tell them about me.}{Alright, but you must promise to tell them about me.}{}{}{}{}
 {674}{OK I promise.}{}{-4}{}{0}{in-2806, qu1042 2}
 {675}{Are you threatening me?}{Are you threatening me?}{}{}{}{}
-{676}{Gime eye thingys NOW!!!}{}{-4}{st -14}{0}{co, fl 522}
-{677}{Gime eye thingys NOW!!!}{}{-4}{st 15}{681}{}
+{676}{Gime eye thingys NOW!!!}{}{-4}{lf4 1}{0}{co, fl 522}
+{677}{Gime eye thingys NOW!!!}{}{-4}{lf4 0}{681}{}
 {678}{I neeeed eye thingys!!!}{}{-4}{ps 15}{673}{}
 {679}{I neeeed eye thingys!!!}{}{-4}{ps -14}{662}{re -5}
 {680}{I'll get my own. Bye.}{}{-4}{}{0}{}
