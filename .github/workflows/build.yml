@@ -16,10 +16,10 @@ jobs:
     # Arcanum module fixes 
     - name: Build Arcanum.PATCH8
       working-directory: modules/Arcanum
-      # Folders directly name to avoid packing dbmaker.exe itself (and dbmaker.exe has to be in that location as it doesn't support Remap Paths)
+      # TODO: Figure out how to avoid packing dbmaker.exe as unlike DATBuilder it doesn't support paths remap
       run: |
         Copy-Item "../../utils/dbmaker.exe" "."
-        & "./dbmaker.exe" -r Arcanum.PATCH8 dlg/* maps/* mes/* scr/* townmap/* 
+        & "./dbmaker.exe" -r Arcanum.PATCH8 *
     - name: Upload Arcanum.PATCH8
       uses: actions/upload-artifact@v4
       with:
@@ -38,10 +38,19 @@ jobs:
         name: Arcanum8.dat
         path: data/Arcanum8.dat
         if-no-files-found: error        
-
-    # TODO: engine fixes
-
-#    - name: Build
-#      run: cargo build --verbose
-#    - name: Run tests
-#      run: cargo test --verbose
+    # engine fixes
+    - name: Build engine fixes
+      working-directory: engine
+      run: |
+        cargo build --workspace --release --verbose
+        Rename-Item "target/i686-pc-windows-msvc/release/engine_fixes.dll" "engine_fixes.asi"
+#   - name: Run tests
+#     run: cargo test --verbose
+    - name: Upload engine fixes
+      uses: actions/upload-artifact@v4
+      with:
+        name: Engine
+        path: |
+          engine/target/i686-pc-windows-msvc/release/dinput.dll
+          engine/target/i686-pc-windows-msvc/release/engine_fixes.asi
+        if-no-files-found: error
