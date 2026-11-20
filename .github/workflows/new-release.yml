@@ -15,9 +15,10 @@ jobs:
     - uses: actions/checkout@v4
     # Arcanum module fixes 
     - name: Build Arcanum.PATCH8
+      working-directory: modules/Arcanum
       run: |
-        Copy-Item "utils/dbmaker.exe" "modules/Arcanum/"
-        & "./modules/Arcanum/dbmaker.exe" -r Arcanum.PATCH8 *
+        Copy-Item "../../utils/dbmaker.exe" "."
+        & "./dbmaker.exe" -r Arcanum.PATCH8 *
     - name: Upload Arcanum.PATCH8
       uses: actions/upload-artifact@v4
       with:
