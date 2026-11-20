@@ -43,3 +43,4 @@ jobs:
           engine/target/i686-pc-windows-msvc/release/dinput.dll
           engine/target/i686-pc-windows-msvc/release/engine_fixes.asi
         if-no-files-found: error
+        retention-days: 1

@@ -12,6 +12,10 @@ jobs:
     runs-on: windows-2022
 
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
       - name: Download build output
         uses: actions/download-artifact@v4
         with:
@@ -25,13 +29,28 @@ jobs:
           New-Item -ItemType Directory -Force -Path "release/"
 
           Copy-Item "build-output/modules/Arcanum/Arcanum.PATCH8" "release/modules/Arcanum/"
-          Copy-Item "build-output/data/Arcanum8.dat" "release/data"
+          Copy-Item "build-output/data/Arcanum8.dat" "release/"
           Copy-Item "build-output/engine/target/i686-pc-windows-msvc/release/dinput.dll" "release/"
           Copy-Item "build-output/engine/target/i686-pc-windows-msvc/release/engine_fixes.asi" "release/"
+
+      # alpha artifact will be `Major.Minor+1.patch-alpha-SHA`, i.e. `1.2.0-alpha-d063c758`
+      - name: Build artifact name
+        id: version
+        shell: pwsh
+        run: |
+          $tag = git tag --list --sort=-version:refname | Select-Object -First 1
+          $tag = $tag.TrimStart('v')
+
+          $version = [version]$tag
+          $nextVersion = "$($version.Major).$($version.Minor + 1).0"
+
+          $hash = git rev-parse --short=7 HEAD
+
+          "artifact_name=$nextVersion-alpha-$hash" >> $env:GITHUB_OUTPUT
 
       - name: Upload alpha
         uses: actions/upload-artifact@v4
         with:
-          name: alpha-build
+          name: ${{ steps.version.outputs.artifact_name }}
           path: release/
           if-no-files-found: error
