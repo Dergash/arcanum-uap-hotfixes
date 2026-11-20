@@ -77,8 +77,8 @@
 {151}{E:}{}{5}{}{0}{ }
 {152}{Though you try to test my patience, my discipline is such that I will not give in to my more violent urges. Consider yourself lucky. Please leave my house.}{Though you try to test my patience, my discipline is such that I will not give in to my more violent urges. Consider yourself lucky. Please leave my house.}{}{}{}{ }
 {153}{I humbly ask for forgiveness. I spoke out of turn.}{}{5}{}{162}{re+10 }
-{154}{You are a coward, like all dwarves.}{}{5}{}{0}{fl 236 ,co}
-{155}{You are a coward and a disgrace to your clan!}{}{5}{}{0}{fl 236 ,co}
+{154}{You are a coward, like all dwarves.}{}{5}{ra -2}{0}{fl 236 ,co}
+{155}{You are a coward and a disgrace to your clan!}{}{5}{ra 2}{0}{fl 236 ,co}
 {162}{Your apology is accepted. My training is such that I should not have let you taunt me in such a manner, regardless.}{Your apology is accepted. My training is such that I should not have let you taunt me in such a manner, regardless.}{}{}{}{ }
 {163}{Your training? You're a mage? How did that happen?}{}{11}{lf3 0, lf16 0}{42}{lf3 1 }
 {164}{What do you mean, your training? What is a dwarf doing here?}{}{5}{ra-2, lf16 0}{122}{ }
