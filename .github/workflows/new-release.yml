@@ -1,0 +1,34 @@
+name: Create new release
+
+on:
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: windows-2022
+
+    steps:
+    - uses: actions/checkout@v4
+    # Arcanum module fixes 
+    - name: Build Arcanum.PATCH8
+      run: |
+        Copy-Item "utils/dbmaker.exe" "modules/Arcanum/"
+        & "./modules/Arcanum/dbmaker.exe" -r Arcanum.PATCH8 *
+    - name: Upload Arcanum.PATCH8
+      uses: actions/upload-artifact@v4
+      with:
+        name: Arcanum.PATCH8
+        path: modules/Arcanum/Arcanum.PATCH8
+        if-no-files-found: error
+
+    # TODO: .proto Fixes
+    # TODO: engine fixes
+
+#    - name: Build
+#      run: cargo build --verbose
+#    - name: Run tests
+#      run: cargo test --verbose
