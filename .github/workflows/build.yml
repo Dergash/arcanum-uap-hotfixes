@@ -20,37 +20,26 @@ jobs:
       run: |
         Copy-Item "../../utils/dbmaker.exe" "."
         & "./dbmaker.exe" -r Arcanum.PATCH8 *
-    - name: Upload Arcanum.PATCH8
-      uses: actions/upload-artifact@v4
-      with:
-        name: Arcanum.PATCH8
-        path: modules/Arcanum/Arcanum.PATCH8
-        if-no-files-found: error     
     # .proto fixes
     - name: Build Arcanum8.dat
       working-directory: data
       run: |
         Copy-Item "../utils/dbmaker.exe" "."
-        & "./dbmaker.exe" -r Arcanum8.dat proto/*
-    - name: Upload Arcanum8.dat
-      uses: actions/upload-artifact@v4
-      with:
-        name: Arcanum8.dat
-        path: data/Arcanum8.dat
-        if-no-files-found: error        
+        & "./dbmaker.exe" -r Arcanum8.dat proto/*     
     # engine fixes
     - name: Build engine fixes
       working-directory: engine
       run: |
         cargo build --workspace --release --verbose
         Rename-Item "target/i686-pc-windows-msvc/release/engine_fixes.dll" "engine_fixes.asi"
-#   - name: Run tests
-#     run: cargo test --verbose
-    - name: Upload engine fixes
+    # upload artifacts (they will be packed differently depending on the build)
+    - name: Upload artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: Engine
+        name: build-output
         path: |
+          modules/Arcanum/Arcanum.PATCH8
+          data/Arcanum8.dat
           engine/target/i686-pc-windows-msvc/release/dinput.dll
           engine/target/i686-pc-windows-msvc/release/engine_fixes.asi
         if-no-files-found: error

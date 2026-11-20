@@ -7,3 +7,31 @@ on:
 jobs:
   build:
     uses: ./.github/workflows/build.yml
+  package:
+    needs: build
+    runs-on: windows-2022
+
+    steps:
+      - name: Download build output
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: build-output
+
+      - name: Prepare alpha
+        run: |
+          New-Item -ItemType Directory -Force -Path "release/modules/Arcanum"
+          New-Item -ItemType Directory -Force -Path "release/data"
+          New-Item -ItemType Directory -Force -Path "release/"
+
+          Copy-Item "build-output/modules/Arcanum/Arcanum.PATCH8" "release/modules/Arcanum/"
+          Copy-Item "build-output/data/Arcanum8.dat" "release/data"
+          Copy-Item "build-output/engine/target/i686-pc-windows-msvc/release/dinput.dll" "release/"
+          Copy-Item "build-output/engine/target/i686-pc-windows-msvc/release/engine_fixes.asi" "release/"
+
+      - name: Upload alpha
+        uses: actions/upload-artifact@v4
+        with:
+          name: alpha-build
+          path: release/
+          if-no-files-found: error
