@@ -24,9 +24,20 @@ jobs:
       with:
         name: Arcanum.PATCH8
         path: modules/Arcanum/Arcanum.PATCH8
-        if-no-files-found: error
+        if-no-files-found: error     
+    # .proto fixes
+    - name: Build Arcanum8.dat
+      working-directory: data
+      run: |
+        Copy-Item "../utils/dbmaker.exe" "."
+        & "./dbmaker.exe" -r Arcanum8.dat *
+    - name: Upload Arcanum8.dat
+      uses: actions/upload-artifact@v4
+      with:
+        name: Arcanum8.dat
+        path: data/Arcanum8.dat
+        if-no-files-found: error        
 
-    # TODO: .proto Fixes
     # TODO: engine fixes
 
 #    - name: Build
