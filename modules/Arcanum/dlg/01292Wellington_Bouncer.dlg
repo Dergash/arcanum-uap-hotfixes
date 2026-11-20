@@ -2,7 +2,7 @@
 {2}{Might I go in for a drink?}{1}{5}{}{9}{}
 {3}{Might I go in for a drink?}{0}{5}{}{12}{}
 {4}{I had a question or two about the Garringsburg robbery...}{}{5}{qa1063 1, qb1063 3, gf2268 0}{27}{}
-{5}{A name on the list you gave me...Rorry Limes.  Who is he?}{}{5}{gf2268 1}{90}{}
+{5}{A name on the list you gave me...Rorry Limes.  Who is he?}{}{5}{gf2268 1, lf2 0}{90}{}
 {6}{Uh...I go inside?}{1}{-4}{}{9}{}
 {7}{Uh...I go inside?}{0}{-4}{}{12}{}
 {8}{Uh...ask questions 'bout Gar-r-ing-b-urg rob-b-bery...?}{}{-4}{qa1063 1, qb1063 3}{27}{}
@@ -67,7 +67,7 @@
 {85}{E:}{}{5}{}{0}{}
 {86}{[You can see he's not happy about it.]  I see.  Well, madam, I can't stop you from going in.  But this is highly irregular.  I'm afraid the regular members won't be at all pleased.  I beg you...finish your business here and leave as quickly as possible. [He opens the door for you.]}{[You can see he's not happy about it.]  I see.  Well, madam, I can't stop you from going in.  But this is highly irregular.  I'm afraid the regular members won't be at all pleased.  I beg you...finish your business here and leave as quickly as possible. [He opens the door for you.]}{}{}{}{}
 {87}{E:}{}{1}{}{-2}{}
-{90}{[He pulls you aside, whispering harshly.]  Good god, man!  Will you shut up already?  If anyone finds out I gave that to you...[He calms down a bit.]  Listen, I don't know who Limes is, but you can always check the Hall of Records.  They might have some information...}{[He pulls you aside, whispering harshly.]  Good god, woman!  Will you shut up already?  If anyone finds out I gave that to you...[He calms down a bit.]  Listen, I don't know who Limes is, but you can always check the Hall of Records.  They might have some information...}{}{}{}{}
+{90}{[He pulls you aside, whispering harshly.]  Good god, man!  Will you shut up already?  If anyone finds out I gave that to you...[He calms down a bit.]  Listen, I don't know who Limes is, but you can always check the Hall of Records.  They might have some information...}{[He pulls you aside, whispering harshly.]  Good god, woman!  Will you shut up already?  If anyone finds out I gave that to you...[He calms down a bit.]  Listen, I don't know who Limes is, but you can always check the Hall of Records.  They might have some information...}{}{}{}{lf2 1}
 {91}{I see.  Thank you.  Might I go inside?}{1}{5}{}{9}{}
 {92}{I see.  Thank you.  Might I go inside?}{0}{5}{}{12}{}
 {93}{E:}{}{5}{}{0}{}
