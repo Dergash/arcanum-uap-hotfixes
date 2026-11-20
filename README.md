@@ -1,5 +1,7 @@
 # Arcanum UAP hotfixes
 
+[![Alpha build](https://github.com/Dergash/arcanum-uap-hotfixes/actions/workflows/alpha-build.yml/badge.svg)](https://github.com/Dergash/arcanum-uap-hotfixes/actions/workflows/alpha-build.yml)
+
 Unofficial hotfixes for the [Unofficial Arcanum Patch](https://terra-arcanum.com/drog/uap.html)
 
 While UAP does a great job of fixing an enourmous amount of various Arcanum bugs, after countless of walkthroughs some issues are still discovered.  

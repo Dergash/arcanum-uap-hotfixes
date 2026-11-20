@@ -16,9 +16,10 @@ jobs:
     # Arcanum module fixes 
     - name: Build Arcanum.PATCH8
       working-directory: modules/Arcanum
+      # Folders directly name to avoid packing dbmaker.exe itself (and dbmaker.exe has to be in that location as it doesn't support Remap Paths)
       run: |
         Copy-Item "../../utils/dbmaker.exe" "."
-        & "./dbmaker.exe" -r Arcanum.PATCH8 *
+        & "./dbmaker.exe" -r Arcanum.PATCH8 dlg/* maps/* mes/* scr/* townmap/* 
     - name: Upload Arcanum.PATCH8
       uses: actions/upload-artifact@v4
       with:
@@ -30,7 +31,7 @@ jobs:
       working-directory: data
       run: |
         Copy-Item "../utils/dbmaker.exe" "."
-        & "./dbmaker.exe" -r Arcanum8.dat *
+        & "./dbmaker.exe" -r Arcanum8.dat proto/*
     - name: Upload Arcanum8.dat
       uses: actions/upload-artifact@v4
       with:
