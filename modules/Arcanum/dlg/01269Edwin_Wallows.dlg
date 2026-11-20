@@ -30,7 +30,7 @@
 {53}{I have some questions about your religion...}{}{5}{lf1 1}{81}{}
 {54}{Perhaps I could solve the problem with your altar?}{}{5}{lf2 1, lf3 0, lf4 0}{148}{}
 {55}{I've yet to retrieve the altar stone...}{}{5}{lf3 1, lf4 0, ni 5621}{182}{}
-{56}{I've returned with the altar stone...}{}{5}{qa1151 1, in 5621, lf3 1, lf4 0}{185}{}
+{56}{I've returned with the altar stone...}{}{5}{qa1151 1, in 5621, lf3 1, lf4 0, qb1055 0}{185}{}
 {57}{I've returned with the altar stone...}{}{5}{qa1055 1, in 5621, lf3 1, lf4 0}{189}{}
 {58}{Whut is this temple...?}{}{-4}{}{66}{}
 {59}{I ask you questions 'bout ree-li-jjun...?}{}{-4}{lf1 1}{81}{}
@@ -140,6 +140,6 @@
 {183}{E:}{}{1}{}{0}{}
 {185}{You have!  That's wonderful!  Here...let me take it...[He does so.]  Whoa!  That's heavy!  We'll have this altar fixed in no time!  Thank you so much!  May Halcyon always light your path, and show you the truth that awaits us all...}{You have!  That's wonderful!  Here...let me take it...[He does so.]  Whoa!  That's heavy!  Thank you so much!  May Halcyon always light your path, and show you the truth that awaits us all...}{}{}{}{gf2749 1, in 5621, qu1151 4, lf4 1, gf2435 1, fp}
 {186}{E:}{}{1}{}{-2}{}
-{189}{You have!  That's wonderful!  Here...let me take it...[He does so.]  Whoa!  That's heavy!  We'll have this altar fixed in no time!  Thank you so much!  May Halcyon always light your path, and show you the truth that awaits us all...}{You have!  That's wonderful!  Here...let me take it...[He does so.]  Whoa!  That's heavy!  Thank you so much!  May Halcyon always light your path, and show you the truth that awaits us all...}{}{}{}{in 5621, lf4 1, gf2435 1, qu1055 4}
+{189}{You have!  That's wonderful!  Here...let me take it...[He does so.]  Whoa!  That's heavy!  We'll have this altar fixed in no time!  Thank you so much!  May Halcyon always light your path, and show you the truth that awaits us all...}{You have!  That's wonderful!  Here...let me take it...[He does so.]  Whoa!  That's heavy!  Thank you so much!  May Halcyon always light your path, and show you the truth that awaits us all...}{}{}{}{in 5621, lf4 1, gf2435 1, qu1055 4, fp, gf2749 1, qu1151 5}
 {190}{E:}{}{1}{}{-2}{}
 
