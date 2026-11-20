@@ -26,15 +26,23 @@ jobs:
         run: |
           New-Item -ItemType Directory -Force -Path "release/modules/Arcanum"
           New-Item -ItemType Directory -Force -Path "release/data"
-          New-Item -ItemType Directory -Force -Path "release/"
 
           Copy-Item "build-output/modules/Arcanum/Arcanum.PATCH8" "release/modules/Arcanum/"
           Copy-Item "build-output/data/Arcanum8.dat" "release/"
           Copy-Item "build-output/engine/target/i686-pc-windows-msvc/release/dinput.dll" "release/"
           Copy-Item "build-output/engine/target/i686-pc-windows-msvc/release/engine_fixes.asi" "release/"
 
+      # no engine fixes
+      - name: Prepare alpha for arcanum-ce
+        run: |
+          New-Item -ItemType Directory -Force -Path "release-ce/modules/Arcanum"
+          New-Item -ItemType Directory -Force -Path "release-ce/data"
+
+          Copy-Item "build-output/modules/Arcanum/Arcanum.PATCH8" "release-ce/modules/Arcanum/"
+          Copy-Item "build-output/data/Arcanum8.dat" "release-ce/"
+
       # alpha artifact will be `Major.Minor+1.patch-alpha-SHA`, i.e. `1.2.0-alpha-d063c758`
-      - name: Build artifact name
+      - name: Build artifact names
         id: version
         shell: pwsh
         run: |
@@ -47,10 +55,18 @@ jobs:
           $hash = git rev-parse --short=7 HEAD
 
           "artifact_name=$nextVersion-alpha-$hash" >> $env:GITHUB_OUTPUT
+          "artifact_name_ce=$nextVersion-ce-alpha-$hash" >> $env:GITHUB_OUTPUT
 
       - name: Upload alpha
         uses: actions/upload-artifact@v4
         with:
           name: ${{ steps.version.outputs.artifact_name }}
           path: release/
+          if-no-files-found: error
+      
+      - name: Upload alpha-ce
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.version.outputs.artifact_name_ce }}
+          path: release-ce/
           if-no-files-found: error
