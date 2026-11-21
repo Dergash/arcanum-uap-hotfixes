@@ -18,9 +18,21 @@ If you only interested in reading the restored dialogue, check [spoilers](./SPOI
 
 ## Compatibility
 
-These patches are specifically for UAP 2.0.2
+### [Arcanum CE Restored](https://discord.gg/gwqBeKfFvc), [Arcanum Renaissance](https://github.com/cdomergue/arcanum-modern)
+
+Hotfixes are already included and you don't need to install this mod separately
+
+### [Arcanum CE](https://github.com/alexbatalov/arcanum-ce), [Arcanum CE.combat](https://github.com/zsogg/arcanum-ce.combat)
+
+Game fixes are compatible so you can install this mod on top of them
+
+### Arcanum Multiverse, Grand Fix
 
 I haven't played with Grand Fix for many years and do not play with Multiverse Edition at all, so at this moment can't confirm if these fixes are compatible with them.
+
+### Vanilla 1.0.7.4
+
+You need to have [UAP 2.0.2](https://terra-arcanum.com/drog/uap.html) installed for these hotfixes to work
 
 ## ✅ Usage Restrictions
 
