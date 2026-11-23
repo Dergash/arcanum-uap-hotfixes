@@ -121,19 +121,19 @@
 {202}{Our mothers have been close friends since we were children.}{}{5}{lf4 1}{258}{ }
 {204}{I've known him forever. I wouldn't keep me out, if I were you.}{}{5}{}{212}{ }
 {205}{I loaned him a large sum of money twenty five years ago.}{}{5}{lf4 1}{258}{ }
-{206}{I loaned him a large sum of money twenty five years ago.}{}{5}{lf4 0}{277}{lf4 1 }
+{206}{I loaned him a large sum of money twenty five years ago.}{}{5}{lf4 0}{278}{lf4 1 }
 {211}{E:}{}{5}{}{0}{ }
 {212}{Uh ... If you are a friend .. umm ... you should have telegraphed ahead to Mr. Bates so he could have notified us to expect you.}{Uh ... If you are a friend .. umm ... you should have telegraphed ahead to Mr. Bates so he could have notified us to expect you.}{}{}{}{ }
 {213}{I did telegraph ahead. It hasn't been delivered?}{}{5}{lf4 1}{258}{ }
-{214}{I did telegraph ahead. It hasn't been delivered?}{}{5}{lf4 0}{281}{lf4 1 }
+{214}{I did telegraph ahead. It hasn't been delivered?}{}{5}{lf4 0}{282}{lf4 1 }
 {215}{I'll telegraph him about your rudeness to one of his oldest friends.}{}{5}{}{218}{ }
 {217}{E:}{}{5}{}{0}{ }
 {218}{Oh, uh ... that won't be necessary, sir,  I just need some explanation or ... a ... something to convince me he would grant you an audience.}{Oh, uh ... that won't be necessary, madam,  I just need some explanation or ... a ... something to convince me he would grant you an audience.}{}{}{}{ }
 {219}{I have had enough of this. Bring me to him and he'll settle it.}{}{5}{}{225}{ }
-{220}{His mother is very sick! I must get word to him!}{}{5}{lf4 0}{287}{lf4 1 }
+{220}{His mother is very sick! I must get word to him!}{}{5}{lf4 0}{289}{lf4 1 }
 {221}{His mother is very sick! I must get word to him!}{}{5}{lf4 1}{258}{lf5 1 }
 {222}{We were very close while struggling to make our fortunes.}{}{5}{lf4 1}{258}{lf5 1 }
-{223}{We were very close while struggling to make our fortunes.}{}{5}{lf4 0}{277}{lf4 1 }
+{223}{We were very close while struggling to make our fortunes.}{}{5}{lf4 0}{278}{lf4 1 }
 {224}{E:}{}{5}{}{0}{ }
 {225}{Pardon my detaining you sir, it is obvious from your attitude that you are telling me the truth. You can understand how we need to be sure about these things. Please, go on in.}{Pardon my detaining you ma'am, it is obvious from your attitude that you are telling me the truth. You can understand how we need to be sure about these things. Please, go on in.}{}{}{}{gf1024 1, gf1010 1, xp 8 }
 {226}{A:}{}{5}{qu1040 0}{-62}{ }
@@ -158,9 +158,10 @@
 {246}{Of course. Good day.}{}{5}{qu1040 0}{-62}{ }
 {247}{Of course. Good day.}{}{5}{qa1040 1}{-62}{qu1040 6 }
 {258}{You obviously know nothing about Mr. Bates, "old friend".}{You obviously know nothing about Mr. Bates, "old friend".}{}{}{}{ }
-{259}{But I need to talk to him, nonetheless.}{}{5}{qu1040 0}{37}{ }
-{260}{Well, what can you tell me about your saboteurs, then?}{}{5}{qu1040 1}{47}{ }
-{261}{E:}{}{5}{}{0}{ }
+{259}{But I need to talk to him, nonetheless.}{}{5}{qu1040 0, qb1041 1}{37}{ }
+{260}{But I need to talk to him, nonetheless.}{}{5}{qa1041 2}{450}{re-5 }
+{261}{Well, what can you tell me about your saboteurs, then?}{}{5}{qu1040 1}{47}{ }
+{262}{E:}{}{5}{}{0}{ }
 {267}{Mr. Bates was a child prodigy, and immeasurably rich by the time he was seventeen years old. He rather detests learning institutions. Perhaps you should learn more of your subject before fabricating stories, eh?}{Mr. Bates was a child prodigy, and immeasurably rich by the time he was seventeen years old. He rather detests learning institutions. Perhaps you should learn more of your subject before fabricating stories, eh?}{}{}{}{ }
 {268}{So, Mr. Bates has never lectured or even been at the university?}{}{5}{}{228}{ }
 {269}{You are wrong ... uh .. I was his schoolmate.}{}{5}{}{258}{lf5 1 }
@@ -168,25 +169,28 @@
 {271}{That is informative, as Mr. Bates was orphaned at a young age. Perhaps you should learn more of your subject before fabricating stories, eh?}{That is informative, as Mr. Bates was orphaned at a young age. Perhaps you should learn more of your subject before fabricating stories, eh?}{}{}{}{ }
 {272}{Our mothers couldn't have been close before he was orphaned?}{}{5}{}{228}{ }
 {273}{My mother is a necromancer. She speaks with his mother daily.}{}{5}{}{258}{lf5 1 }
-{274}{But I need to talk to him, nonetheless.}{}{5}{qu1040 0}{37}{ }
-{275}{Well, what can you tell me about your saboteurs, then?}{}{5}{qu1040 1}{47}{ }
-{276}{E:}{}{5}{}{0}{ }
-{277}{Mr. Bates was a child prodigy, and immeasurably rich by the time he was seventeen years old. Perhaps you should learn more of your subject before fabricating stories, eh?}{Mr. Bates was a child prodigy, and immeasurably rich by the time he was seventeen years old. He rather detests learning institutions. Perhaps you should learn more of your subject before fabricating stories, eh?}{}{}{}{ }
-{278}{You are an expert on his financial dealings? Does he know this?}{}{5}{}{228}{ }
-{279}{He was rich because I loaned him the money to get started!}{}{5}{}{258}{lf5 1 }
-{280}{E:}{}{5}{}{0}{ }
-{281}{Mr. Bates' FRIENDS are aware that he has his own personal telegraph within his home.}{Mr. Bates' FRIENDS are aware that he has his own personal telegraph within his home.}{}{}{}{ }
-{282}{I'll return with the telegraph and have you fired when I do!}{}{5}{}{240}{ }
-{283}{It must have been installed recently. I've not been here in 5 years.}{}{5}{}{258}{lf5 1 }
-{284}{But I need to talk to him, nonetheless.}{}{5}{qu1040 0}{37}{ }
-{285}{Well, what can you tell me about your saboteurs, then?}{}{5}{qu1040 1}{47}{ }
-{286}{E:}{}{5}{}{0}{ }
-{287}{That is informative, as Mr. Bates was orphaned at young age. Perhaps you should learn more of your subject before fabricating stories, eh?}{That is informative, as Mr. Bates was orphaned at young age. Perhaps you should learn more of your subject before fabricating stories, eh?}{}{}{}{ }
-{288}{So, you know of all of Mr. Bates secret internal codes, do you?}{}{5}{}{228}{ }
-{289}{You should learn more of your subject before instigating a fight!}{}{5}{}{0}{fl 193 ,co}
-{290}{But I need to talk to him, nonetheless.}{}{5}{qu1040 0}{37}{ }
-{291}{Well, what can you tell me about your saboteurs, then?}{}{5}{qu1040 1}{47}{ }
-{292}{E:}{}{5}{}{0}{ }
+{274}{But I need to talk to him, nonetheless.}{}{5}{qu1040 0, qb1041 1}{37}{ }
+{275}{But I need to talk to him, nonetheless.}{}{5}{qa1041 2}{450}{re-5 }
+{276}{Well, what can you tell me about your saboteurs, then?}{}{5}{qu1040 1}{47}{ }
+{277}{E:}{}{5}{}{0}{ }
+{278}{Mr. Bates was a child prodigy, and immeasurably rich by the time he was seventeen years old. Perhaps you should learn more of your subject before fabricating stories, eh?}{Mr. Bates was a child prodigy, and immeasurably rich by the time he was seventeen years old. He rather detests learning institutions. Perhaps you should learn more of your subject before fabricating stories, eh?}{}{}{}{ }
+{279}{You are an expert on his financial dealings? Does he know this?}{}{5}{}{228}{ }
+{280}{He was rich because I loaned him the money to get started!}{}{5}{}{258}{lf5 1 }
+{281}{E:}{}{5}{}{0}{ }
+{282}{Mr. Bates' FRIENDS are aware that he has his own personal telegraph within his home.}{Mr. Bates' FRIENDS are aware that he has his own personal telegraph within his home.}{}{}{}{ }
+{283}{I'll return with the telegraph and have you fired when I do!}{}{5}{}{240}{ }
+{284}{It must have been installed recently. I've not been here in 5 years.}{}{5}{}{258}{lf5 1 }
+{285}{But I need to talk to him, nonetheless.}{}{5}{qu1040 0, qb1041 1}{37}{ }
+{286}{But I need to talk to him, nonetheless.}{}{5}{qa1041 2}{450}{re-5 }
+{287}{Well, what can you tell me about your saboteurs, then?}{}{5}{qu1040 1}{47}{ }
+{288}{E:}{}{5}{}{0}{ }
+{289}{That is informative, as Mr. Bates was orphaned at young age. Perhaps you should learn more of your subject before fabricating stories, eh?}{That is informative, as Mr. Bates was orphaned at young age. Perhaps you should learn more of your subject before fabricating stories, eh?}{}{}{}{ }
+{290}{So, you know of all of Mr. Bates secret internal codes, do you?}{}{5}{}{228}{ }
+{291}{You should learn more of your subject before instigating a fight!}{}{5}{}{0}{fl 193 ,co}
+{292}{But I need to talk to him, nonetheless.}{}{5}{qu1040 0, qb1041 1}{37}{ }
+{293}{But I need to talk to him, nonetheless.}{}{5}{qa1041 2}{450}{re-5 }
+{294}{Well, what can you tell me about your saboteurs, then?}{}{5}{qu1040 1}{47}{ }
+{295}{E:}{}{5}{}{0}{ }
 {296}{G:}{G:}{}{}{}{ }
 {297}{I am the replacement servant.}{}{5}{}{315}{ }
 {298}{Me Sir vent.}{}{-4}{}{315}{ }
