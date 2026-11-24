@@ -25,14 +25,14 @@ jobs:
       working-directory: data
       run: |
         Copy-Item "../utils/dbmaker.exe" "."
-        & "./dbmaker.exe" -r Arcanum8.dat proto/*     
+        & "./dbmaker.exe" -r Arcanum8.dat *     
     #  grey area .proto fixes
     - name: Build Arcanum8Grey.dat
       working-directory: data
       run: |
         Copy-Item "../utils/dbmaker.exe" "."
         & Copy-Item "../grey-legion/data/*" "." -Recurse -Force
-        & "./dbmaker.exe" -r Arcanum8Grey.dat proto/*
+        & "./dbmaker.exe" -r Arcanum8Grey.dat *
     # engine fixes
     - name: Build engine fixes
       working-directory: engine
