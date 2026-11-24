@@ -265,7 +265,7 @@
 {267}{Qintarra? You're an elf!  Have you lost your mind?}{Qintarra? You're an elf!  Have you lost your mind?}{}{}{}{}
 {268}{No I have not!  It is just that I am not from around here.}{}{5}{}{272}{}
 {269}{Not at all, Myrth. You see, I am not from this continent.}{1}{5}{re 60, ch 19}{279}{}
-{270}{[Fluttering your eyelashes] No, I am not from around here, Myrth.}{0}{5}{re 60, be 14, ch 10}{279}{}
+{270}{[Fluttering your eyelashes] No, I am not from around here, Myrth.}{0}{5}{re 60, ch 10, lf8 0}{279}{}
 {271}{E:}{}{1}{}{0}{}
 {272}{Imagine that!  An elf who does not know the location of Qintarra?  It is not possible!}{Imagine that!  An elf who does not know the location of Qintarra?  It is not possible!}{}{}{}{}
 {273}{I truly do not know its location, sir.  I am not from this continent.}{}{5}{}{276}{}
