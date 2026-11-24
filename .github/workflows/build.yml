@@ -26,6 +26,13 @@ jobs:
       run: |
         Copy-Item "../utils/dbmaker.exe" "."
         & "./dbmaker.exe" -r Arcanum8.dat proto/*     
+    #  grey area .proto fixes
+    - name: Build Arcanum8Grey.dat
+      working-directory: data
+      run: |
+        Copy-Item "../utils/dbmaker.exe" "."
+        & Copy-Item "../grey-legion/data/*" "." -Recurse -Force
+        & "./dbmaker.exe" -r Arcanum8Grey.dat proto/*
     # engine fixes
     - name: Build engine fixes
       working-directory: engine
@@ -40,6 +47,7 @@ jobs:
         path: |
           modules/Arcanum/Arcanum.PATCH8
           data/Arcanum8.dat
+          data/Arcanum8Grey.dat
           engine/target/i686-pc-windows-msvc/release/dinput.dll
           engine/target/i686-pc-windows-msvc/release/engine_fixes.asi
         if-no-files-found: error

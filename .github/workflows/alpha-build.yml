@@ -41,6 +41,14 @@ jobs:
           Copy-Item "build-output/modules/Arcanum/Arcanum.PATCH8" "release-ce/modules/Arcanum/"
           Copy-Item "build-output/data/Arcanum8.dat" "release-ce/"
 
+      # grey area fixes
+      - name: Prepare alpha for grey area fixes
+        run: |
+          New-Item -ItemType Directory -Force -Path "release-grey-legion/modules/Arcanum"
+          New-Item -ItemType Directory -Force -Path "release-grey-legion/data"
+
+          Copy-Item "build-output/data/Arcanum8Grey.dat" "release-grey-legion/Arcanum8.dat"
+
       # alpha artifact will be `Major.Minor+1.patch-alpha-SHA`, i.e. `1.2.0-alpha-d063c758`
       - name: Build artifact names
         id: version
@@ -56,6 +64,7 @@ jobs:
 
           "artifact_name=$nextVersion-alpha-$hash" >> $env:GITHUB_OUTPUT
           "artifact_name_ce=$nextVersion-ce-alpha-$hash" >> $env:GITHUB_OUTPUT
+          "artifact_name_grey_legion=$nextVersion-grey-legion-alpha-$hash" >> $env:GITHUB_OUTPUT
 
       - name: Upload alpha
         uses: actions/upload-artifact@v4
@@ -69,4 +78,11 @@ jobs:
         with:
           name: ${{ steps.version.outputs.artifact_name_ce }}
           path: release-ce/
+          if-no-files-found: error
+
+      - name: Upload alpha-grey-legion
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.version.outputs.artifact_name_grey_legion }}
+          path: release-grey-legion/
           if-no-files-found: error
