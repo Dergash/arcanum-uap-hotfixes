@@ -47,6 +47,7 @@ jobs:
           New-Item -ItemType Directory -Force -Path "release-grey-legion/modules/Arcanum"
           New-Item -ItemType Directory -Force -Path "release-grey-legion/data"
 
+          Copy-Item "build-output/grey-legion/modules/Arcanum/Arcanum.PATCH8" "release-grey-legion/modules/Arcanum"
           Copy-Item "build-output/grey-legion/data/Arcanum8.dat" "release-grey-legion/"
 
       # alpha artifact will be `Major.Minor+1.patch-alpha-SHA`, i.e. `1.2.0-alpha-d063c758`

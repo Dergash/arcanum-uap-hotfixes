@@ -13,6 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
     # Arcanum module fixes 
     - name: Build Arcanum.PATCH8
       working-directory: modules/Arcanum
@@ -20,12 +21,22 @@ jobs:
       run: |
         Copy-Item "../../utils/dbmaker.exe" "."
         & "./dbmaker.exe" -r Arcanum.PATCH8 *
+
+    # grey area Arcanum module fixes
+    - name: Build Arcanum.PATCH8 for Grey Legion
+      working-directory: grey-legion/modules/Arcanum
+      run: |
+        Copy-Item "../../../utils/dbmaker.exe" "."
+        & Copy-Item "../../../modules/Arcanum/*" "." -Recurse -Force
+        & "./dbmaker.exe" -r Arcanum.PATCH8 *
+
     # .proto fixes
     - name: Build Arcanum8.dat
       working-directory: data
       run: |
         Copy-Item "../utils/dbmaker.exe" "."
-        & "./dbmaker.exe" -r Arcanum8.dat *     
+        & "./dbmaker.exe" -r Arcanum8.dat *
+
     #  grey area .proto fixes
     - name: Build Arcanum8.dat for Grey Legion
       working-directory: grey-legion/data
@@ -33,12 +44,14 @@ jobs:
         Copy-Item "../../utils/dbmaker.exe" "."
         & Copy-Item "../../data/*" "." -Recurse -Force
         & "./dbmaker.exe" -r Arcanum8.dat *
+
     # engine fixes
     - name: Build engine fixes
       working-directory: engine
       run: |
         cargo build --workspace --release --verbose
         Rename-Item "target/i686-pc-windows-msvc/release/engine_fixes.dll" "engine_fixes.asi"
+
     # upload artifacts (they will be packed differently depending on the build)
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
@@ -48,6 +61,7 @@ jobs:
           modules/Arcanum/Arcanum.PATCH8
           data/Arcanum8.dat
           grey-legion/data/Arcanum8.dat
+          grey-legion/modules/Arcanum/Arcanum.PATCH8
           engine/target/i686-pc-windows-msvc/release/dinput.dll
           engine/target/i686-pc-windows-msvc/release/engine_fixes.asi
         if-no-files-found: error
